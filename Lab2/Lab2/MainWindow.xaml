@@ -1,0 +1,33 @@
+﻿<Window x:Class="Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2"
+        mc:Ignorable="d"
+        Title="Birthday Info" Height="320" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10">
+            <TextBox x:Name="firstNameTextBox" TextChanged="Input_TextChanged" Text="First name"/>
+            <TextBox x:Name="lastNameTextBox" TextChanged="Input_TextChanged" Text="Last name"/>
+            <TextBox x:Name="emailTextBox" TextChanged="Input_TextChanged" Text="Email"/>
+            <DatePicker x:Name="birthDatePicker" SelectedDateChanged="BirthDatePicker_SelectedDateChanged"/>
+            <Button x:Name="proceedButton" Content="Proceed" Click="ProceedButton_Click" IsEnabled="False"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock x:Name="textBlockFirstName"/>
+            <TextBlock x:Name="textBlockLastName"/>
+            <TextBlock x:Name="textBlockEmail"/>
+            <TextBlock x:Name="textBlockBirthday"/>
+            <TextBlock x:Name="textBlockIsAdult"/>
+            <TextBlock x:Name="textBlockWesternZodiac"/>
+            <TextBlock x:Name="textBlockChineseZodiac"/>
+            <TextBlock x:Name="textBlockIsBirthday"/>
+        </StackPanel>
+    </Grid>
+</Window>
